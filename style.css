@@ -7,7 +7,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: 240px 1fr 350px;
-    grid-auto-rows: minmax(auto);
+    grid-auto-rows: minmax(65px, auto);
     
 }
 .item {
@@ -15,6 +15,9 @@
     border: 0px solid rgb(255, 255, 255);
     gap: 3px;
 }
+
+/* First Column */
+
 
 .item1 {
     grid-column: 1/2;
@@ -25,12 +28,11 @@
     font-weight: 20px;
     font-stretch: 20px;
     font-family: 'Quicksand', sans-serif;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
     color: #4e4e4e;
 }
+
+/* Second Column */
+
 
 .item2 {
     grid-column: 2/4;
@@ -255,7 +257,7 @@
     
     
 }
-.owners {
+.authors {
     margin-top: 20px;
     font-size: 16px;
     color: #4e4e4e;
@@ -333,4 +335,57 @@
     border: #ED7839;
 }
 
+@media only screen and (max-width: 425px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    iframe {
+        width: calc(815.2px /2);
+        height: calc(458.4px /2);
+        
+    }
+    .item.item2 {
+        margin-left: 0;
 
+    }
+    .vector-img {
+        margin-left: 0;
+    }
+    .text-youknow {
+        margin-left: 0;
+    }
+    .detail-title {
+        margin-left: 0;
+    }
+    .topic-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .geloa-img {
+        width: 100%;
+        height: 100%;
+    }
+    .topic-button {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subject {
+        margin-top: 15px;
+        display: block;
+        margin-left: 5px;
+    }
+
+    .name-subject {
+        display: block;
+        padding: 5px;
+    }
+    .text-comment {
+        display: block;
+        padding: 5px;
+    }
+ 
+}  
